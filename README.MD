@@ -24,6 +24,13 @@ npm install
      * @param maxProcess    最大下载进程数量        默认50
      */
     new spider(keywords, outDir, maxPage, maxProcess) 
+    
+    /**
+    *   开始爬
+    *   返回值是一个Promis
+    *   @async 
+    */
+    spider.pa()
 
 ```
 参数没有做校验 = =   
