@@ -5,17 +5,15 @@ npm install
 这个爬虫很简单 
 我是想爬爬EroManga-Sensei的而已 = =   
 例子 ->
-```javascript 1.8
+```javascript
     const spider = require('./spider')
     const s = new spider('EroManga-Sensei', './download/EroManga-Sensei')
     s.pa().then(_ => {}).catch(e => console.log(e))
 ```
 
-
-
 #参数
 ##spider
-```javascript 1.8
+```javascript
     /**
      *  爬虫
      * @param keyword       关键字                 必须

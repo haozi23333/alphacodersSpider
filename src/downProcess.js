@@ -31,6 +31,9 @@ process.on('message', message => {
             break;
     }
 })
+process.on('SIGHUP', () => {
+    process.exit()
+});
 const download = task => {
     new spiderDownload(task).on('error', err => {
         task.retryCount++
