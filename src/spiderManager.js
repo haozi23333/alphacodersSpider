@@ -45,7 +45,7 @@ class spiderManager extends events.EventEmitter{
         this.maxProcess = this.maxProcess > this.urlList.length ? this.urlList.length : this.maxProcess
         let processId = 0
         this.processList = Array(this.maxProcess).fill(1).map(() => {
-            const newProcess = fork(__dirname +'/downProcess.js')
+            const newProcess = fork(__dirname +'/downloadProcess.js')
             newProcess.on('message', this.onmessage(this))
             newProcess.on('error',  (err) => {
                 console.log(err)
